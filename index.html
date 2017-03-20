@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+      <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <link href="main.css" rel="stylesheet" />
+      <script src="angular.min.js"></script>
+    <script src="MainController.js"></script>
+        <script src="app.js"></script>
+
+    <!-- Include the AngularJS library -->
+  
+  </head>
+  <body ng-app="myShoppingList">
+    <div class="header">
+      <div class="container">
+        <h1>My Shopping List</h1>
+      </div>
+    </div>
+
+    <div ng-app="myShoppingList" ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="x in products">{{x}}
+            <span ng-click="removeItem($index)">&times;</span>
+          </li>
+    </ul>
+    <input ng-model="addMe">
+    <button ng-click="addItem()">Add</button>
+    <p>{{errortext}}</p>
+</div>
+
+
+    <!-- Modules -->
+
+
+    <!-- Controllers -->
+
+  </body>
+</html>
